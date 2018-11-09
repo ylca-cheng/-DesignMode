@@ -17,7 +17,7 @@ public class DynamicProxyHandler implements InvocationHandler{
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("代理工作了. 方法名：" + method.getName());
+        System.out.println("代理开始工作了. 方法名：" + method.getName());
         Object object =  method.invoke(proxyed, args);
 
         System.out.println("代理工作结束了. 方法名：" + method.getName());
